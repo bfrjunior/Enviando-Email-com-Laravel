@@ -18,9 +18,8 @@ class RegisterEmail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(public array $data)
     {
-        //
     }
 
     /**
@@ -31,7 +30,7 @@ class RegisterEmail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Register Email',
+            subject: $this->{'subject'},
         );
     }
 
@@ -42,6 +41,7 @@ class RegisterEmail extends Mailable
      */
     public function content()
     {
+
         return new Content(
             view: 'Mail.registerMail',
         );
