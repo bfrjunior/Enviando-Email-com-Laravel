@@ -54,6 +54,6 @@ class RegisterEmail extends Mailable
      */
     public function attachments()
     {
-        return [];
+        return ['C:/xampp/htdocs/Laravel 9/b7mailer/public/boneco.png'];
     }
 }
