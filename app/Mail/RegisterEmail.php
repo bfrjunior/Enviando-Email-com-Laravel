@@ -30,7 +30,9 @@ class RegisterEmail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: $this->{'subject'},
+            subject: 'Assunto Importante',
+            from: 'reply@email.com',
+            replyTo: 'Kobsdev2019@email.com'
         );
     }
 
