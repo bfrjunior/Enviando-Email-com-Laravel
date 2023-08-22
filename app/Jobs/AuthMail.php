@@ -32,8 +32,5 @@ class AuthMail implements ShouldQueue
      */
     public function handle()
     {
-        Mail::to('Kobsdev2019@gmail.com')->queue(new RegisterEmail(
-            data: ['nome' => 'Fernando', 'mensagem' => 'Tudo bem com você ?']
-        ));
     }
 }
