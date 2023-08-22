@@ -12,7 +12,7 @@ class AuthMailController extends Controller
     public function sendRegisterMail()
     {
 
-        Mail::to('Kobsdev2019@gmail.com')->send(new RegisterEmail(
+        Mail::to('Kobsdev2019@gmail.com')->queue(new RegisterEmail(
             data: ['nome' => 'Fernando', 'mensagem' => 'Tudo bem com você ?']
         ));
     }
